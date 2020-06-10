@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /*设置文本水平垂直居中*/
+        
+        div {
+            width: 300px;
+            height: 300px;
+            border: #43dc2f 1px solid;
+            text-align: center;
+            line-height: 300px;
+        }
+        /*在文本两个居中的基础上，增加图片垂直居中，否则无法达到两个居中效果*/
+        
+        div img {
+            vertical-align: middle;
+        }
+        
+        .box {
+            width: 960px;
+            height: 540px;
+            border: greenyellow 1px solid;
+            /*设置背景图片，repeat可以在图片小于窗口时设置填充方式*/
+            background: url(img/小鸟.jpg) repeat top right;
+            overflow: auto;
+        }
+        
+        #nav {
+            text-align: center;
+            /*设置文本在div框居中，注意高度设置，等于height才能垂直居中*/
+            line-height: 100px;
+            position: sticky;
+            top: 50px;
+            height: 100px;
+            background: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        小可爱
+        <img width="150px" src="/CSS/Day02/img/小鸟.jpg" alt=" ">
+    </div>
+    <div class="box">
+        <p id="nav">我是粘性定位!</p>
+        行深般若波罗蜜多时，
+        <br /> 照见五蕴皆空，
+        <br /> 度一切苦厄。
+        <br /> 舍利子，
+        <br /> 色不异空，
+        <br /> 空不异色，
+        <br /> 色即是空，
+        <br /> 空即是色，
+        <br /> 受想行识，
+        <br /> 亦复如是。
+        <br /> 舍利子，
+        <br /> 是诸法空相，
+        <br /> 不生不灭，
+        <br /> 不垢不净，
+        <br /> 不增不减。
+        <br /> 是故空中无色，
+        <br /> 无受想行识，
+        <br /> 无眼耳鼻舌身意，
+        <br /> 无色声香味触法，
+        <br /> 无眼界，
+        <br /> 乃至无意识界。
+        <br /> 无无明，
+        <br /> 亦无无明尽，
+        <br /> 乃至无老死，
+        <br /> 亦无老死尽。
+        <br /> 无苦集灭道，
+        <br /> 无智亦无得。
+        <br /> 以无所得故，
+        <br /> 菩提萨埵，
+        <br /> 依般若波罗蜜多故，
+        <br /> 心无罣碍，
+        <br /> 无罣碍故，
+        <br /> 无有恐怖，
+        <br /> 远离颠倒梦想，
+        <br /> 究竟涅磐。
+        <br /> 三世诸佛，
+        <br /> 依般若波罗蜜多故，
+        <br /> 得阿耨多罗三藐三菩提。
+        <br /> 故知般若波罗蜜多，
+        <br /> 是大神咒，
+        <br /> 是大明咒，
+        <br /> 是无上咒，
+        <br /> 是无等等咒，
+        <br /> 能除一切苦，
+        <br /> 真实不虚。
+        <br /> 故说般若波罗蜜多咒，
+        <br /> 即说咒曰：揭谛揭谛波罗揭谛波罗僧揭谛菩提萨婆诃。
+    </div>
+</body>
+
+</html>

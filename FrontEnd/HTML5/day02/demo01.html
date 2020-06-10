@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+
+
+<body>
+    <!--表单
+    1、描述
+        表单是一个包含表单元素的区域，表单本身并不可见。
+    2、表单元素是允许用户在表单中输入内容，比如：文本域(textarea)、下拉列表、单选框(radio-buttons)、复选框(checkboxes)等等。
+        多数情况下被用到的表单标签是输入标签（<input>），输入类型是由类型属性（type）定义的——文本域通过<input type="text"> 标签来设定（键入字母、数字等），在大多数浏览器中，文本域的缺省宽度是20个字符。
+            value="在该文本域中默认被显示的内容，如果使用者没有修改该文本域内容，则默认的value值会被发送至后台服务器"
+            name    后台服务器读取前台页面发送过来的数据的唯一性标识
+            id		前台页面当前文档中唯一性标识
+	3、表单使用表单标签 <form> 来设置：action = "接收该页面数据的后台服务器URL"——根据锚点找ID原理，若只有#，无ID或IP，页面不跳转。
+    
+    4、两种最常用的 HTTP 方法是：GET 和 POST。
+	    4.1、HTTP：超文本传输协议（HTTP），保证客户机与服务器之间的通信
+		    HTTP 的工作方式是客户机与服务器之间的请求-应答协议。
+		    web 浏览器可能是客户端，而计算机上的网络应用程序也可能作为服务器端。
+		    举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。
+    
+        4.2、在客户机和服务器之间进行请求-响应时，两种 HTTP 请求方法：GET 和 POST：
+		    GET - 从指定的资源请求数据
+			    GET 请求可被缓存
+			    GET 请求保留在浏览器历史记录中
+			    GET 请求可被收藏为书签
+			    GET 请求不应在处理敏感数据时使用
+			    GET 请求有长度限制
+			    GET 请求只应当用于取回数据
+		    POST - 向指定的资源提交要被处理的数据
+			    POST 请求不会被缓存
+			    POST 请求不会保留在浏览器历史记录中
+			    POST 不能被收藏为书签
+			    POST 请求对数据长度没有要求
+    -->
+    <form action="#" method="post">
+        <!--<form action="#" method="get">-->
+        帐号:<input type="text" name="account" id="account" value="" placeholder="请输入帐号" autocomplete="off">
+        <br> 密码:<input type="password" name="password" id="password" value="" placeholder="请输入密码" autocomplete="off">
+        <br>
+        <input type="submit" value="登录">
+    </form>
+
+
+    <!--上传文件-->
+    上传头像
+    <!--<button id="headBtn" onclick="selectHeadImg()">上传头像</button>-->
+    <input type="file" name="" id="headImgFrom"><br>
+    <img width="150px" src="" id="headImg" alt=""><br>
+
+    <!--手机号-->
+    <br> 手机号
+    <input type="tel" name="mobile" id="mobile" value="" placeholder="请输入手机号" autocomplete="off">
+
+    <!--邮箱-->
+    <br> 邮箱
+    <input type="email" name="email" id="email" value="" placeholder="请输入邮箱" autocomplete="off">
+
+    <!--文本-->
+    <br> 姓名
+    <input type="text" name="nickname" id="nickname" value="" placeholder="请输入昵称" autocomplete="off">
+    <br> 密码
+    <input type="password" name="password" id="password" value="" placeholder="请输入密码" autocomplete="off">
+    <br>确认密码
+    <input type="password" name="repassword" id="repassword" value="" placeholder="请确认密码" autocomplete="off">
+
+    <!--二选一，其中label设置点击文字选中-->
+    <br>性别&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="male">精神小伙儿</label>
+    <input type="radio" name="gender" id="male" value="1">&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="female">扒蒜小妹儿</label>
+    <input type="radio" name="gender" id="female" value="0">
+    <!--下拉框选择性别-->
+    <br>性别
+    <select name="gender" id="gender">
+        <option value="0">扒蒜小妹儿</option>
+        <option value="1" selected>精神小伙儿</option>
+    </select>
+
+    <!--复选框，多选-->
+    <br>爱好&nbsp;&nbsp;&nbsp;&nbsp; <label for="swimming">游泳</label>
+    <input type="checkbox" name="hobby" id="swimming" value="swimming"> &nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="running">跑步</label>
+    <input type="checkbox" name="hobby" id="running" value="running">&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="skiing">滑雪</label>
+    <input type="checkbox" name="hobby" id="skiing" value="skiing">
+
+    <!--下拉复选框，多选-->
+    <br>爱好
+    <select name="hobby" id="hobby" multiple>
+        <option value="swimming">游泳</option>
+        <option value="running">跑步</option>
+        <option value="skiing">滑雪</option>
+    </select>
+
+    <!--日期，使用mydate97插件-->
+    <br>出生日期
+    <input type="date" name="birthday" id="birthday">
+    <br>
+
+    <!--必填字段，不填会报错，edge未生效-->必填
+    <input type="text" name="" id="" required>
+
+    <!--输入段落，可设置宽高-->
+    <br>个性签名<br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br>
+
+    <!--点击提交-->
+    <input type="submit" value="注册 ">
+
+    <!---->
+
+
+</body>
+
+
+
+<script>
+    //    显示头像
+    /*
+        window.onload = function() {
+            function selectHeadImg() {
+                window.document.getElementById("#headImgFrom").onclick(function() {});
+            }
+        }
+    */
+    $(function() {
+        $("#pictureImg").click(function() { //点击img -> 触发file
+            $("#pictureInput").click();
+        });
+
+        $("#pictureInput").change(function() { //file被修改 -> img显式
+            var file = this.files[0];
+            var path = URL.createObjectURL(file);
+            $("#pictureImg").attr("src", path);
+        });
+    });
+</script>
+
+</html>

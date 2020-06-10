@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        a:link {
+            color: #000000;
+        }
+        /* 未访问链接*/
+        
+        a:visited {
+            color: #00FF00;
+        }
+        /* 已访问链接 */
+        
+        a:hover {
+            color: #FF00FF;
+        }
+        /* 鼠标移动到链接上 */
+        
+        a:active {
+            color: #0000FF;
+        }
+        /* 鼠标点击时 */
+        /*
+                伪对象选择器
+                    伪对象也叫伪元素，在过去，伪类和伪元素都被书写成前面只加一个冒号，实际上伪对象应该用两个冒号来定义。
+                伪类和伪对象（元素）的区别
+                    伪类一般反映无法在CSS 中轻松或者可靠检测到的某个元素的状态或者属性；
+                    伪元素表示DOM 外部的某种文档结构
+                常用伪元素
+                1.E:before/E::before
+                2.E:after/E::after
+                伪元素是在元素内容的前面或后面定义的，必须要添加content:””这个属性，不然伪元素无法定义成功。
+                p::after{ content:"在P 标签元素内容前加了内容"; color: red;}
+            */
+        
+        input:checked+span {
+            background-color: #e5eee4;
+        }
+        
+        input:checked+span::after {
+            content: "——我中奖了";
+        }
+        
+        #hide {
+            visibility: hidden;
+        }
+        
+        #hide2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>你过来呀</legend>
+        <ul>
+            <li><label><input type="radio" name="colour-group" value="0" /><span>蓝色</span></label></li>
+        </ul>
+    </fieldset>
+    <p><b>链接</b></p>
+    <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+    <p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+
+
+    <p id="hide"><b>链接1</b></p>
+    <p id="hide2"><b>链接2</b></p>
+    <p><b>链接3</b></p>
+</body>
+
+</html>

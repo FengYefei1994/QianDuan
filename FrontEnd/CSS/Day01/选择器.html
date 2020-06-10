@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <style>
+        h3 {
+            color: #dc2f5f;
+        }
+    </style>
+
+    <!--类定义   .类名{}    ，在body中引用时，用class=类名即可-->
+    <style>
+        .buzhidao {
+            color: greenyellow;
+            background-color: grey;
+            font-size: 30px;
+        }
+    </style>
+
+    <!--ID选择器：同锚点工作原理，使用处定义ID-->
+    <style>
+        #para1 {
+            color: greenyellow;
+            background-color: grey;
+            font-size: 30px;
+        }
+    </style>
+
+    <!--属性选择器-->
+    <style>
+        input[type=text] {
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+
+    <!--所有子孙均选择      >
+        直接子孙选择        （空格）
+    -->
+    <style>
+        ul li a {
+            text-decoration: none;
+        }
+    </style>
+    <!--只选择直接子孙
+    <style>
+        ul li>a {
+            text-decoration: none;
+        }
+    </style>-->
+
+    <!--直接相邻选择    +
+        间相邻选择      ~
+    -->
+    <style>
+        #two+p {
+            color: greenyellow;
+            background-color: grey;
+            font-size: 30px;
+        }
+    </style>
+
+    <!--公共选择-->
+    <style>
+        #para3 {
+            background-color: khaki;
+        }
+        
+        #para4 {
+            background-color: lawngreen;
+        }
+        
+        #para3,
+        #para4 {
+            color: lightcoral;
+            font-size: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h3>
+        <font color="red">
+            老妹儿03
+        </font>
+    </h3>
+    <h3>
+        老妹儿04
+    </h3>
+    <p id="para1">Hello World!</p>
+    <p>这个段落不受该样式的影响。</p>
+    <p class="buzhidao">Hello World!</p>
+    <p class="buzhidao">这个段落不受该样式的影响。</p>
+
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+
+
+    <ul>
+        <a href="http://" target="_blank" rel="noopener noreferrer">11</a>
+        <li>
+            <span>
+                <a href="http://" target="_blank" rel="noopener noreferrer">1</a>
+            </span>
+        </li>
+        <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">2</a>
+        </li>
+    </ul>
+
+
+    <span>
+        <p>老大</p>
+        <p id="two">老二</p>
+        <p>老三</p>
+        <p>老四</p>
+    </span>
+
+
+    <p id="para3">Beautiful boy!</p>
+    <p id="para4">你好，世界！</p>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS布局</title>
+    <header>
+        div/boxmodel/定位
+    </header>
+    <style>
+        /*
+        margin      border向外至一条边框的区域——可针对上右下左分别设置距离值，具有对称性
+        border      width、height设置距离直接作用框
+        padding     border向内至content的区域
+        content     内容顶边放置
+    */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        div {
+            height: 300px;
+            width: 600px;
+            border: 1px solid blue;
+            /*设置背景色*/
+            background-color: gray;
+            margin: 10px 15px;
+            /*上下10，左右15*/
+        }
+        
+        #img02 {
+            /*相对于父容器：body左上角（0,0）*/
+            position: absolute;
+            left: 200px;
+            top: 350px;
+        }
+        /*相对于div本该所处位置：第三行左上角（0,1200）*/
+        
+        #img03 {
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!--div是block元素，独占一行，可设置宽高-->
+    <div>
+        <img ID="img01" src="/CSS/Day02/img/box-model.gif" alt="">
+    </div>
+    <div>
+        <img ID="img02" src="/CSS/Day02/img/box-model.gif" alt="">
+    </div>
+    <div>
+        <img ID="img03" src="/CSS/Day02/img/box-model.gif" alt="">
+    </div>
+
+</body>
+
+</html>
