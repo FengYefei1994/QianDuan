@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+
+<body>
+    操作者:<span id="op"></span>
+</body>
+
+</html>
+<script>
+    let text = localStorage.getItem('person');
+    if (text != null) {
+        window.console.log(text);
+        let person = JSON.parse(text);
+        window.console.log(person.nickname);
+        window.document.getElementById('op').innerText = person.nickname;
+    } else {
+        location.replace('长久存储.html');
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+    <script>
+        let person = {
+            nickname: '李昊哲',
+            age: 38,
+            gender: 1,
+        };
+        localStorage.setItem('person', JSON.stringify(person));
+
+        function replace() {
+            location.replace('长久存储2.html');
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="replace()">你过来呀</button>
+</body>
+
+</html>
+<script>
+</script>
